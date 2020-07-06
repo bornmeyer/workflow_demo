@@ -8,7 +8,7 @@ from app.models.comment import Comment
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
-    queryset = Step.objects.all()
+    queryset = Comment.objects.all()
 
     def list(self, request, workflow_pk=None):
         workflow = Workflow.objects.get(id=workflow_pk)
@@ -18,8 +18,8 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def retrieve(self, request, pk=None, workflow_pk=None):
         workflow = Workflow.objects.get(id=workflow_pk)
-        comment = workflow.comments_set.get(id=pk)
-        response = self.serializer_class(comment).data
+        comment = workflow.comment_set.get(id=pk)
+        response = self.serializer_class(comment).data       
         return Response(data=response, status=200)
 
     def create(self, request, workflow_pk=None):

@@ -6,8 +6,8 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['id', 'text', 'name']
-        read_only_fields = ['id']
+        fields = ('id', 'text', 'name')
+        read_only_fields = ('id', 'name')
     
     def get_name(self, obj):
         return obj.author.fullname()
