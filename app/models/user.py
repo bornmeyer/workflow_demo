@@ -9,3 +9,7 @@ class User(models.Model):
     firstname = models.TextField(default="")
     lastname = models.TextField(default="")
     api_key = models.TextField(default="")
+
+    
+    def fullname(self):
+        return f"{self.firstname} {self.lastname}"

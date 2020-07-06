@@ -14,4 +14,3 @@ class Step(models.Model):
     order = models.IntegerField(default=0)
 
     workflow = models.ForeignKey(Workflow, on_delete=models.CASCADE)
-    

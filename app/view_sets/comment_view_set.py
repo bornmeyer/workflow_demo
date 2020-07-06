@@ -24,8 +24,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def create(self, request, workflow_pk=None):
         workflow = Workflow.objects.get(id=workflow_pk)
-        new_comment = Comment(author=request.user, workflow=workflow)
-        new_comment.name = request.data['name']
+        new_comment = Comment(author=request.user, workflow=workflow)        
         new_comment.text = request.data['text']
         new_comment.save()
         response = self.serializer_class(new_comment).data
