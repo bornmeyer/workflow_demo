@@ -4,8 +4,8 @@
 
 Checkout the repository.
 
-***If on Windows:*** run run.bat from the root directory
-***If on Linux:*** run run.sh from the root directory
+-   ***If on Windows:*** run run.bat from the root directory
+-   ***If on Linux:*** run run.sh from the root directory
 
 Both will install venv and create a virtual environment, all required
 packages, run the test suite and last but not least start the development server.
