@@ -138,5 +138,5 @@ REST_FRAMEWORK = {
     ]
 }
 
-if 'test' in sys.argv:
-    DATABASES['default']['ENGINE'] = 'sqlite3'
+#if 'test' in sys.argv:
+#    DATABASES['default']['ENGINE'] = 'sqlite3'
