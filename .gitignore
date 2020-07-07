@@ -180,3 +180,4 @@ workflow_db
 
 .coverage
 cover/
+.vscode/
