@@ -5,6 +5,17 @@ from app.serializers.workflow_serializer import WorkflowSerializer
 from app.models.workflow import Workflow
 from app.models.step import Step
 
+"""
+    Provides methods to manipulate workflow resources, accessible via /workflows
+
+    A get returns a list of all workflows,
+
+    A post creates a new workflow
+
+    A patch at /workflows/{id} updates the workflow
+
+    A delete at /workflows/{id} deletes the workflow
+"""
 class WorkflowViewSet(viewsets.ModelViewSet):
     serializer_class = WorkflowSerializer
     queryset = Workflow.objects.all()

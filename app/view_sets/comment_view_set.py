@@ -4,6 +4,18 @@ from app.serializers.comment_serializer import CommentSerializer
 from app.models.workflow import Workflow
 from app.models.comment import Comment
 
+"""
+    Provides methods to manipulate comment resources, 
+    accessible via /workflows/{workflow_id}/comments
+
+    A get returns a list of all comments for the workflow,
+
+    A post creates a new comment for the workflow
+
+    A patch at /workflows/{workflow_id}/comments/{id} updates the comment
+
+    A delete at /workflows/{workflow_id}/comments/{id} deletes the comment
+"""
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
     queryset = Comment.objects.all()
