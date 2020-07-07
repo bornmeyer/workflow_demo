@@ -1,9 +1,7 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets
 from rest_framework.response import Response
-
 from app.serializers.comment_serializer import CommentSerializer
 from app.models.workflow import Workflow
-from app.models.step import Step
 from app.models.comment import Comment
 
 class CommentViewSet(viewsets.ModelViewSet):
