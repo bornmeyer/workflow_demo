@@ -29,3 +29,5 @@ Most stuff is centered around workflows, being nested resources of the before me
 -   *http://{your host}/workflows/{workflow_id}/comments*: get returns a list of comments appending to the current workflow, a post creates a new comment
 -   *http://{your host}/workflows/{workflow_id}/comments/{comment_id}*: a get returns a specific comment, a patch updates it, a delete deletes it
 -   *http://{your host}/users*: a get delivers a list of available users, a post creates a new user, the api_key will automatically generated
+
+Its REST, so Verbs and resources.
