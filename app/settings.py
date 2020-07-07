@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'app',    
-    'drf_yasg'
+    'drf_yasg',
+    'django_nose'
 ]
 
 MIDDLEWARE = [
@@ -138,8 +139,10 @@ REST_FRAMEWORK = {
     ]
 }
 
-#if 'test' in sys.argv:
-#    DATABASES['default'] = {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': 'workflow_db_test'
-#    }
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=app',
+    '--cover-html'
+]

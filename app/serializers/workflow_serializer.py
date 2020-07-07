@@ -11,8 +11,3 @@ class WorkflowSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'steps', 'comments']
         read_only_fields = ['id']
         
-
-    def create(self, validated_data):            
-        new_workflow = Workflow(**validated_data)
-        new_workflow.save(force_insert=True)        
-        return new_workflow
