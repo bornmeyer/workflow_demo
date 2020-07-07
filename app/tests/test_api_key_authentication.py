@@ -5,7 +5,7 @@ from app.models import ApiKeyAuthentication
 from django.test.client import RequestFactory
 from rest_framework import exceptions
 
-class ApiKeyAuthenticationTestCase(TestCase):
+class ApiKeyAuthenticationTests(TestCase):
     def setUp(self):
         api_key = uuid.uuid4()        
         User.objects.create(firstname="test", lastname="test", email="test@example.com", api_key=api_key)

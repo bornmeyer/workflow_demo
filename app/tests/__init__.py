@@ -1,5 +1,6 @@
-from .test_api_key_authentication import ApiKeyAuthenticationTestCase
+from .test_api_key_authentication import ApiKeyAuthenticationTests
 from .test_user import UserTestCase
 from .test_user_endpoint import UserEndpointTests
 from .test_workflow_endpoint import WorkflowEndpointTests
 from .test_step_endpoint import StepEndpointTests
+from .test_comment_endpoint import CommentEndpointTests
