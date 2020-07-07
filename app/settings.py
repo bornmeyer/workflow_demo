@@ -139,4 +139,7 @@ REST_FRAMEWORK = {
 }
 
 #if 'test' in sys.argv:
-#    DATABASES['default']['ENGINE'] = 'sqlite3'
+#    DATABASES['default'] = {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'workflow_db_test'
+#    }

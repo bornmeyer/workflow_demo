@@ -3,7 +3,9 @@ from django.db import models
 from .user import User
 
 class Workflow(models.Model):
-    db_table = "workflows"
+    class Meta:        
+        db_table = "workflows"
+        
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.TextField()
     description = models.TextField()

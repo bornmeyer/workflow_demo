@@ -6,8 +6,8 @@ from app.models.workflow import Workflow
 class Step(models.Model):
     class Meta:
         ordering = ['order',]
-
-    db_table = "steps"
+        db_table = "steps"
+        
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.TextField()
     description = models.TextField()

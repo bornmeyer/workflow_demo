@@ -6,13 +6,14 @@ from django.test.client import RequestFactory
 from rest_framework import exceptions
 
 class ApiKeyAuthenticationTestCase(TestCase):
-    def setup(self):
-        api_key = uuid.uuid4()
-        User.objects.create(firstname="test", lastname="test", email="test@test.com", api_key=api_key)
+    def setUp(self):
+        api_key = uuid.uuid4()        
+        User.objects.create(firstname="test", lastname="test", email="test@example.com", api_key=api_key)
 
     def test_that_you_can_authenticate_with_an_api_key(self):
        
-        user = User.objects.get(email="test@test.com")
+        user = User.objects.get(email="test@example.com")
+        user.refresh_from_db()
         url = f'/workflows'
         request_factory = RequestFactory()
         request = request_factory.get(url)

@@ -10,7 +10,6 @@ class StepViewSet(viewsets.ModelViewSet):
     queryset = Step.objects.all()
 
     def list(self, request, workflow_pk=None):
-        print(request.user.email)
         workflow = Workflow.objects.get(id=workflow_pk)
         steps = workflow.step_set.all()
         response = self.serializer_class(steps, many=True).data

@@ -14,6 +14,5 @@ class WorkflowSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):            
         new_workflow = Workflow(**validated_data)
-        new_workflow.save(force_insert=True)
-        
+        new_workflow.save(force_insert=True)        
         return new_workflow
